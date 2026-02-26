@@ -1,95 +1,156 @@
 /* style.css */
+
+/* === General === */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text for contrast */
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === HERO SECTION === */
 .hero {
-    background: linear-gradient(135deg, #1f1f1f, #2c3e50);
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* tech gradient */
     color: #fff;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
 .hero .profile-pic {
-    width: 150px;
+    width: 160px;
     border-radius: 50%;
-    border: 3px solid #fff;
-    margin-bottom: 20px;
+    border: 4px solid #00fff0; /* cyan accent */
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 255, 240, 0.4);
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 .hero h2 {
     font-size: 1.5em;
-    margin: 10px 0;
+    margin: 15px 0;
     font-weight: 400;
+    color: #00fff0;
 }
 
 .hero p {
-    font-size: 1.1em;
-    max-width: 600px;
-    margin: 0 auto 20px;
+    font-size: 1.2em;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #ccc;
 }
 
 .btn {
     display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #00fff0;
+    color: #121212;
+    font-weight: 600;
+    padding: 12px 25px;
     margin: 5px;
-    text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
+.btn:hover {
+    background-color: #00c9b1;
+    transform: translateY(-2px);
+}
+
+/* === SECTIONS === */
 .section {
-    padding: 60px 20px;
-    max-width: 1000px;
+    padding: 80px 20px;
+    max-width: 1100px;
     margin: auto;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 40px;
-    color: #2c3e50;
+    margin-bottom: 50px;
+    color: #00fff0;
+    font-size: 2em;
 }
 
+/* === GRIDS === */
 .skills-grid, .projects-grid, .contact-grid {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+/* === CARDS === */
 .project-card, .skills-grid > div, .contact-grid > div {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.project-card:hover, .skills-grid > div:hover, .contact-grid > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 240, 0.5);
+}
+
+/* === PROJECT CARDS === */
 .project-card img {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .project-card h3 {
     margin: 10px 0;
-    color: #3498db;
+    color: #00fff0;
+    font-size: 1.3em;
 }
 
 .project-card p {
-    font-size: 0.95em;
+    font-size: 1em;
+    color: #ccc;
+    line-height: 1.5em;
 }
 
+/* === FOOTER === */
 .footer {
     text-align: center;
-    padding: 20px;
-    background: #2c3e50;
-    color: #fff;
+    padding: 30px;
+    background: #0f2027;
+    color: #00fff0;
+    font-weight: 500;
+}
+
+/* === DASHBOARD IMAGES === */
+.dashboard-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.dashboard-images img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 255, 240, 0.3);
+    transition: transform 0.3s;
+}
+
+.dashboard-images img:hover {
+    transform: scale(1.03);
+}
+
+/* === RESPONSIVE TEXT === */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2em; }
+    .hero h2 { font-size: 1.3em; }
+    .hero p { font-size: 1em; }
+    .dashboard-images img { width: 90%; }
 }
