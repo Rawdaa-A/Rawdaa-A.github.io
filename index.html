@@ -1,54 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rawda Portfolio</title>
-    <meta charset="UTF-8">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #1e3c72, #2a5298);
-            color: white;
-            text-align: center;
-            padding-top: 150px;
-        }
-
-        h1 {
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        button {
-            padding: 12px 25px;
-            font-size: 18px;
-            border: none;
-            border-radius: 25px;
-            background-color: white;
-            color: #1e3c72;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #ddd;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rawda Abdelghaffar | AI & Data Analytics Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin: 0; background-color: #0d1117; color: #c9d1d9; }
+    a { color: #58a6ff; text-decoration: none; }
+    header { text-align: center; padding: 100px 20px; background: #161b22; }
+    header img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; }
+    h1 { font-size: 2.5em; margin: 20px 0 10px; }
+    h2 { font-size: 1.8em; margin-top: 60px; color: #58a6ff; }
+    section { max-width: 900px; margin: auto; padding: 50px 20px; }
+    .skills, .projects { display: flex; flex-wrap: wrap; gap: 20px; }
+    .skill, .project { background: #161b22; padding: 20px; border-radius: 12px; flex: 1 1 250px; }
+    .cta { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #58a6ff; color: #0d1117; border-radius: 8px; font-weight: bold; }
+    footer { text-align: center; padding: 50px 20px; background: #161b22; }
+  </style>
 </head>
-
 <body>
 
-    <h1>Hi, I'm Rawda 👋</h1>
-    <p>Aspiring AI & Data Analyst</p>
-    <p>I build data dashboards & AI projects 🚀</p>
+  <!-- Hero Section -->
+  <header>
+    <img src="[PASTE_LINKEDIN_IMAGE_LINK]" alt="Rawda Abdelghaffar Profile">
+    <h1>Rawda Abdelghaffar</h1>
+    <p>AI & Data Analytics Trainee | Future Cybersecurity Leader</p>
+    <a href="#projects" class="cta">View Projects</a>
+  </header>
 
-    <button onclick="alert('Welcome to my portfolio!')">
-        Contact Me
-    </button>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am a first-year Artificial Intelligence student at Delta University, specializing in Cybersecurity and Data Analysis. I am driven by curiosity, passion for problem-solving, and the ambition to become a future leader in AI and Cybersecurity. Currently enrolled in the Digital Egypt Pioneers Initiative (DEPI), I continuously challenge myself to master technical skills, deliver results, and grow as a high-achiever in tech.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Python (Data Analysis & AI)</li>
+          <li>Pandas, NumPy, Excel</li>
+          <li>SQL & Database Fundamentals</li>
+          <li>Cybersecurity Basics</li>
+          <li>AI Concepts & Machine Learning</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Tools</h3>
+        <ul>
+          <li>Google Colab</li>
+          <li>Power BI</li>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Currently Learning</h3>
+        <ul>
+          <li>Advanced Cybersecurity Practices</li>
+          <li>Data Visualization & Dashboards</li>
+          <li>AI Automation & Models</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Project 1: Student Data Analysis</h3>
+        <p><strong>Tools:</strong> Python, Pandas, Excel</p>
+        <p><strong>Problem:</strong> Analyzed student performance datasets to identify trends.</p>
+        <p><strong>Result:</strong> Generated actionable insights and visual reports.</p>
+        <p><strong>Learned:</strong> Data cleaning, analysis, and visualization best practices.</p>
+      </div>
+      <div class="project">
+        <h3>Project 2: Cybersecurity Awareness Dashboard</h3>
+        <p><strong>Tools:</strong> Power BI, Excel</p>
+        <p><strong>Problem:</strong> Created a dashboard to track cybersecurity risks for users.</p>
+        <p><strong>Result:</strong> Interactive dashboard highlighting vulnerabilities.</p>
+        <p><strong>Learned:</strong> Data visualization, risk assessment, user-focused insights.</p>
+      </div>
+      <div class="project">
+        <h3>Project 3: AI Prediction Model</h3>
+        <p><strong>Tools:</strong> Python, NumPy, Scikit-learn</p>
+        <p><strong>Problem:</strong> Built a simple AI model to predict dataset outcomes.</p>
+        <p><strong>Result:</strong> Achieved 85% accuracy with proper validation.</p>
+        <p><strong>Learned:</strong> Model training, testing, evaluation, and reporting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <p><strong>Digital Egypt Pioneers Initiative (DEPI)</strong> – Structured training program in AI, Data Analysis, and Cybersecurity. Gained hands-on skills in data projects, problem-solving, and tech leadership mindset.</p>
+  </section>
+
+  <!-- Goals Section -->
+  <section id="goals">
+    <h2>Goals</h2>
+    <p>My professional goal is to specialize in Cybersecurity while leveraging my AI and Data Analysis expertise to solve real-world problems. I aim to grow as a **future leader in AI, Data Analytics, and Cybersecurity**, contributing to innovative projects and impactful solutions.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:rawda@example.com">rawda@example.com</a></p>
+    <p>LinkedIn: <a href="[PASTE_LINKEDIN_PROFILE_LINK]" target="_blank">Rawda Abdelghaffar</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Rawda Abdelghaffar | AI & Data Analytics Portfolio</p>
+  </footer>
 
 </body>
 </html>
