@@ -532,6 +532,7 @@
       display: flex;
       flex-direction: column;
       height: 100%;
+      min-height: 320px;
     }
 
     .project-card:hover {
@@ -540,33 +541,10 @@
       transform: translateY(-12px);
     }
 
-    .project-image-wrapper {
-      width: 100%;
-      height: 220px;
-      background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .project-image-wrapper::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent, rgba(16, 8, 33, 0.8));
-    }
-
-    .project-image-icon {
-      font-size: 3rem;
-      position: relative;
-      z-index: 1;
-      opacity: 0.9;
-    }
+    /* Project image wrapper removed for cleaner design */
 
     .project-content {
-      padding: 2rem;
+      padding: 2.5rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -1183,25 +1161,38 @@
     </div>
 </section>
 
-<!-- PROJECTS - REDESIGNED -->
+<!-- PROJECTS - CLEAN & PROFESSIONAL -->
 <section class="section" id="projects">
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
-      <img src="" alt="Pacman AI Project" class="project-img">
         <div class="project-card">
-            <div class="project-image-wrapper">
-                <div class="project-image-icon">📊</div>
-            </div>
             <div class="project-content">
-                <h3 class="project-title">Superstore Performance & Profitability</h3>
-                <p class="project-description">Top products & regional profitability analysis using Excel Pivot Tables & Power Query. Comprehensive insights into sales trends and revenue optimization.</p>
+                <h3 class="project-title">Energy Consumption & Price Analysis</h3>
+                <p class="project-description">Analyzing trends and correlations in energy data with interactive dashboard filters. Real-time data visualization and insights for energy management.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Excel</span>
+                    <span class="tech-badge">Pivot Tables</span>
+                    <span class="tech-badge">Data Analysis</span>
+                </div>
+                <div class="project-button-group">
+                    <a href="https://github.com/Rawdaa-A/Energy-dashboard." target="_blank" class="github-btn">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-content">
+                <h3 class="project-title">Superstore Sales Performance Dashboard</h3>
+                <p class="project-description">Comprehensive sales data analysis with interactive dashboards. Insights into top products, regional profitability, and customer segmentation using advanced Excel tools.</p>
                 <div class="tech-badges">
                     <span class="tech-badge">Excel</span>
                     <span class="tech-badge">Power Query</span>
-                    <span class="tech-badge">Pivot Tables</span>
+                    <span class="tech-badge">Power Pivot</span>
                 </div>
                 <div class="project-button-group">
-                    <a href="https://github.com/Rawdaa-A" target="_blank" class="github-btn">
+                    <a href="https://github.com/Rawdaa-A/Super-Sales-Dashboard" target="_blank" class="github-btn">
                         <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
                 </div>
@@ -1209,39 +1200,16 @@
         </div>
 
         <div class="project-card">
-            <div class="project-image-wrapper">
-                <div class="project-image-icon">⚡</div>
-            </div>
             <div class="project-content">
-                <h3 class="project-title">Energy Consumption & Price Analysis</h3>
-                <p class="project-description">Analyzing trends and correlations in energy data with interactive dashboard filters. Real-time data visualization and predictive insights for energy management.</p>
+                <h3 class="project-title">Car Data Analysis Dashboard</h3>
+                <p class="project-description">End-to-end data pipeline from SQL normalization to Excel visualization. Insights into brand performance, pricing trends, and transaction history with relational data modeling.</p>
                 <div class="tech-badges">
-                    <span class="tech-badge">Power BI</span>
-                    <span class="tech-badge">Data Analysis</span>
                     <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">Excel</span>
+                    <span class="tech-badge">Data Modeling</span>
                 </div>
                 <div class="project-button-group">
-                    <a href="https://github.com/Rawdaa-A" target="_blank" class="github-btn">
-                        <i class="fa-brands fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-image-wrapper">
-                <div class="project-image-icon">🌤️</div>
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Weather Dashboard</h3>
-                <p class="project-description">Real-time weather monitoring dashboard with interactive charts and data visualizations. Responsive design with live API integration and historical data tracking.</p>
-                <div class="tech-badges">
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">API</span>
-                    <span class="tech-badge">Chart.js</span>
-                </div>
-                <div class="project-button-group">
-                    <a href="https://github.com/Rawdaa-A" target="_blank" class="github-btn">
+                    <a href="https://github.com/Rawdaa-A/Car-Data-Analysis-Dashboard" target="_blank" class="github-btn">
                         <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
                 </div>
