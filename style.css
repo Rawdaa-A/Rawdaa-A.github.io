@@ -54,11 +54,11 @@ nav{
 
 /* HERO */
 .hero {
-    min-height: 87vh; 
+    min-height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 120px 8% 40px; 
+    padding: 7.5rem 2rem 5rem;
     background: radial-gradient(circle at top left, #4c1d95 0%, #0f0720 60%);
 }
 
@@ -100,13 +100,13 @@ nav{
     justify-content:center;
     flex-wrap:wrap;
     gap:50px;
-    padding:40px 5%;
+    padding:20px 5%;
     background:var(--bg-dark);
 }
 
 .tech-item{
     text-align:center;
-    opacity:0.7;
+    opacity:0.5;
     transition:var(--transition);
 }
 
@@ -117,7 +117,7 @@ nav{
 
 .tech-item i{
     color: #331c52;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 8px;
     display: block;
 }
