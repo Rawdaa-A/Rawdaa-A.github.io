@@ -116,7 +116,8 @@
       min-height: 87vh;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
+      gap: 3rem;
       padding: 7.5rem 2rem 0;
       background: radial-gradient(circle at top left, #4c1d95 0%, #0f0720 60%);
       position: relative;
@@ -170,9 +171,9 @@
     }
 
     .hero-img {
-      flex: 1;
+      flex: 0 1 auto;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
     }
 
@@ -657,7 +658,7 @@
     .contact-section {
       padding: 8rem 2rem;
       text-align: center;
-      background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 50%, #0f0720 100%);
+      background: linear-gradient(to bottom, #1a0f2e 0%, #0f0720 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -672,10 +673,10 @@
 
     .contact-title {
       font-family: 'Poppins', sans-serif;
-      font-size: 3.5rem;
+      font-size: 2.75rem;
       font-weight: 800;
-      margin-bottom: 2rem;
-      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
     }
 
     .contact-title::first-line {
