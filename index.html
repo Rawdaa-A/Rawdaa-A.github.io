@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rawda Abdelghaffar | Data Analyst & AI Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /**
-     * Portfolio Styles
+     * Portfolio Styles - IMPROVED VERSION
      * Design Theme: Deep Purple/Dark with Glassmorphism
      * Color Palette:
      * - --bg-dark: #100821 (primary background)
@@ -190,7 +190,7 @@
       filter: drop-shadow(0 0 40px rgba(168, 85, 247, 0.6));
     }
 
-    /* ===== TECH STACK ===== */
+    /* ===== TECH STACK - REPOSITIONED ===== */
     .tech-stack {
       display: flex;
       justify-content: center;
@@ -198,6 +198,20 @@
       gap: 3rem;
       padding: 2.5rem 5%;
       background: var(--bg-dark);
+      opacity: 0;
+      animation: slideInTechStack 0.8s ease-out 0.3s forwards;
+      margin-top: 2rem;
+    }
+
+    @keyframes slideInTechStack {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .tech-item {
@@ -213,8 +227,8 @@
     }
 
     .tech-item i {
-      color: #331c52;
-      font-size: 1.5rem;
+      color: var(--purple-light);
+      font-size: 1.75rem;
       margin-bottom: 0.5rem;
       display: block;
     }
@@ -222,6 +236,7 @@
     .tech-item span {
       color: var(--text-gray);
       font-size: 0.875rem;
+      font-weight: 500;
     }
 
     /* ===== SECTIONS ===== */
@@ -395,7 +410,7 @@
       color: var(--purple-light);
     }
 
-    /* ===== COMPETENCIES ===== */
+    /* ===== COMPETENCIES - ENHANCED ===== */
     .competencies-section {
       margin-top: 3rem;
     }
@@ -410,25 +425,44 @@
 
     .competencies-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
 
     .competency-card {
-      background: linear-gradient(135deg, rgba(107, 33, 168, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);
+      background: linear-gradient(135deg, rgba(107, 33, 168, 0.15) 0%, rgba(168, 85, 247, 0.08) 100%);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(168, 85, 247, 0.3);
+      border: 1.5px solid rgba(168, 85, 247, 0.4);
       border-radius: 1.5rem;
-      padding: 2rem;
+      padding: 2.5rem;
       transition: var(--transition);
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .competency-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--purple-main), var(--purple-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .competency-card:hover::before {
+      transform: scaleX(1);
     }
 
     .competency-card:hover {
       border-color: var(--purple-light);
       box-shadow: 0 0 40px rgba(168, 85, 247, 0.3);
-      transform: scale(1.05);
+      transform: translateY(-8px);
     }
 
     .competency-card h4 {
@@ -437,6 +471,14 @@
       font-weight: 700;
       margin-bottom: 1.5rem;
       transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .competency-icon {
+      font-size: 1.75rem;
+      display: inline-block;
     }
 
     .competency-card:hover h4 {
@@ -445,54 +487,88 @@
 
     .competency-list {
       list-style: none;
+      text-align: left;
     }
 
     .competency-list li {
       color: var(--text-gray);
-      margin-bottom: 0.75rem;
-      padding-left: 1.5rem;
+      margin-bottom: 0.875rem;
+      padding-left: 2rem;
       position: relative;
       transition: var(--transition);
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     .competency-list li:before {
-      content: '●';
+      content: '✓';
       position: absolute;
       left: 0;
       color: var(--purple-light);
-      font-size: 0.5rem;
+      font-weight: bold;
+      font-size: 1rem;
     }
 
     .competency-card:hover .competency-list li {
       color: var(--text-white);
+      transform: translateX(4px);
     }
 
-    /* ===== PROJECT CARDS ===== */
+    /* ===== PROJECT CARDS - REDESIGNED ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
     .project-card {
-      background: linear-gradient(135deg, rgba(107, 33, 168, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);
-      border: 2px solid rgba(168, 85, 247, 0.3);
+      background: linear-gradient(135deg, rgba(107, 33, 168, 0.12) 0%, rgba(168, 85, 247, 0.06) 100%);
+      border: 1.5px solid rgba(168, 85, 247, 0.3);
       border-radius: 1.5rem;
       overflow: hidden;
       transition: var(--transition);
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .project-card:hover {
       border-color: var(--purple-light);
-      box-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
-      transform: scale(1.05);
+      box-shadow: 0 15px 50px rgba(168, 85, 247, 0.35);
+      transform: translateY(-12px);
     }
 
-    .project-card img {
+    .project-image-wrapper {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 15px;
+      height: 220px;
+      background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-image-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent, rgba(16, 8, 33, 0.8));
+    }
+
+    .project-image-icon {
+      font-size: 3rem;
+      position: relative;
+      z-index: 1;
+      opacity: 0.9;
     }
 
     .project-content {
       padding: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .project-title {
@@ -501,6 +577,7 @@
       font-weight: 700;
       margin-bottom: 0.75rem;
       transition: var(--transition);
+      color: var(--text-white);
     }
 
     .project-card:hover .project-title {
@@ -511,30 +588,69 @@
       color: var(--text-gray);
       margin-bottom: 1.5rem;
       line-height: 1.6;
-      font-size: 0.9375rem;
+      font-size: 0.95rem;
+      flex-grow: 1;
     }
 
     .tech-badges {
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
+      margin-bottom: 1.5rem;
     }
 
     .tech-badge {
       display: inline-block;
-      padding: 0.375rem 0.75rem;
-      background: rgba(107, 33, 168, 0.4);
-      border: 1px solid rgba(168, 85, 247, 0.5);
+      padding: 0.4rem 0.85rem;
+      background: rgba(107, 33, 168, 0.45);
+      border: 1px solid rgba(168, 85, 247, 0.6);
       border-radius: 9999px;
       font-size: 0.75rem;
       color: var(--purple-light);
       transition: var(--transition);
       cursor: pointer;
+      font-weight: 500;
     }
 
     .tech-badge:hover {
-      background: rgba(107, 33, 168, 0.6);
+      background: rgba(107, 33, 168, 0.65);
       border-color: var(--purple-light);
+      transform: scale(1.05);
+    }
+
+    .project-button-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: auto;
+    }
+
+    .github-btn {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
+      color: var(--text-white);
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .github-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+      background: linear-gradient(135deg, var(--purple-light), var(--purple-main));
+    }
+
+    .github-btn:active {
+      transform: translateY(-1px);
     }
 
     /* ===== CONTACT SECTION ===== */
@@ -720,7 +836,7 @@
         grid-template-columns: 1fr;
       }
 
-      .cards-grid {
+      .projects-grid {
         grid-template-columns: 1fr;
       }
 
@@ -734,6 +850,14 @@
 
       .about-grid {
         grid-template-columns: 1fr;
+      }
+
+      .project-button-group {
+        flex-direction: column;
+      }
+
+      .github-btn {
+        width: 100%;
       }
     }
 
@@ -776,6 +900,26 @@
         height: 3rem;
         font-size: 1.2rem;
       }
+
+      .competencies-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .competency-card {
+        padding: 1.75rem;
+      }
+
+      .competency-card h4 {
+        font-size: 1.25rem;
+      }
+
+      .project-content {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -805,10 +949,10 @@
         <p>Transforming raw data into insights that drive smarter decisions.</p>
 
         <div class="social-links">
-            <a href="mailto:rawdaabdelghaffar03@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://github.com/Rawdaa-A" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rawda-abdelghaffar" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://wa.me/201015483429" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:rawdaabdelghaffar03@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/Rawdaa-A" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rawda-abdelghaffar" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/201015483429" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
     </div>
 
@@ -817,14 +961,32 @@
     </div>
 </section>
 
-<!-- TECH STACK -->
+<!-- TECH STACK - NOW POSITIONED LOWER -->
 <div class="tech-stack">
-    <div class="tech-item"><i class="fa-brands fa-python"></i><span>Python</span></div>
-    <div class="tech-item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
-    <div class="tech-item"><i class="fa-solid fa-file-excel"></i><span>Excel</span></div>
-    <div class="tech-item"><i class="fa-solid fa-chart-line"></i><span>Power BI</span></div>
-    <div class="tech-item"><i class="fa-solid fa-brain"></i><span>AI / ML</span></div>
-    <div class="tech-item"><i class="fa-solid fa-code"></i><span>Java & C#</span></div>
+    <div class="tech-item">
+        <i class="fa-brands fa-python"></i>
+        <span>Python</span>
+    </div>
+    <div class="tech-item">
+        <i class="fa-solid fa-database"></i>
+        <span>SQL</span>
+    </div>
+    <div class="tech-item">
+        <i class="fa-solid fa-file-excel"></i>
+        <span>Excel</span>
+    </div>
+    <div class="tech-item">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Power BI</span>
+    </div>
+    <div class="tech-item">
+        <i class="fa-solid fa-brain"></i>
+        <span>AI / ML</span>
+    </div>
+    <div class="tech-item">
+        <i class="fa-solid fa-code"></i>
+        <span>Java & C#</span>
+    </div>
 </div>
 
 <!-- ABOUT ME SECTION -->
@@ -907,72 +1069,103 @@
         </div>
     </div>
 
-    <!-- Core Competencies -->
+    <!-- Core Competencies - ENHANCED -->
     <div class="competencies-section">
         <h3 class="competencies-title">Core Competencies</h3>
         <div class="competencies-grid">
             <div class="competency-card">
-                <h4>📊 Data Analysis</h4>
+                <h4><span class="competency-icon">📊</span> Data Analysis</h4>
                 <ul class="competency-list">
-                    <li>Data Cleaning</li>
-                    <li>KPI Tracking</li>
-                    <li>SQL</li>
+                    <li>Data Cleaning & Preprocessing</li>
+                    <li>KPI Tracking & Metrics</li>
+                    <li>SQL Query Optimization</li>
                     <li>Statistical Modeling</li>
                 </ul>
             </div>
             <div class="competency-card">
-                <h4>💻 Programming</h4>
+                <h4><span class="competency-icon">💻</span> Programming</h4>
                 <ul class="competency-list">
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>C#</li>
+                    <li>Python Development</li>
+                    <li>Java & C# Applications</li>
                     <li>Database Management</li>
+                    <li>API Integration</li>
                 </ul>
             </div>
             <div class="competency-card">
-                <h4>🤖 AI & ML</h4>
+                <h4><span class="competency-icon">🤖</span> AI & Machine Learning</h4>
                 <ul class="competency-list">
-                    <li>Machine Learning</li>
-                    <li>Intelligent Systems</li>
-                    <li>ML Fundamentals</li>
+                    <li>Machine Learning Models</li>
+                    <li>Predictive Analytics</li>
+                    <li>Intelligent Systems Design</li>
+                    <li>ML Fundamentals & Theory</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECTS - REDESIGNED -->
 <section class="section" id="projects">
     <h2 class="section-title">Featured Projects</h2>
-    <div class="cards-grid">
+    <div class="projects-grid">
 
-        <div class="card project-card">
-            <h3>Superstore Performance & Profitability</h3>
-            <p>Top products & regional profitability analysis using Excel Pivot Tables & Power Query.</p>
-            <div class="tech-badges">
-                <span class="tech-badge">Excel</span>
-                <span class="tech-badge">Power Query</span>
-                <span class="tech-badge">Pivot Tables</span>
+        <div class="project-card">
+            <div class="project-image-wrapper">
+                <div class="project-image-icon">📊</div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Superstore Performance & Profitability</h3>
+                <p class="project-description">Top products & regional profitability analysis using Excel Pivot Tables & Power Query. Comprehensive insights into sales trends and revenue optimization.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Excel</span>
+                    <span class="tech-badge">Power Query</span>
+                    <span class="tech-badge">Pivot Tables</span>
+                </div>
+                <div class="project-button-group">
+                    <a href="https://github.com/Rawdaa-A" target="_blank" class="github-btn">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="card project-card">
-            <h3>Energy Consumption & Price Analysis</h3>
-            <p>Analyzing trends and correlations in energy data with interactive dashboard filters.</p>
-            <div class="tech-badges">
-                <span class="tech-badge">Power BI</span>
-                <span class="tech-badge">Data Analysis</span>
-                <span class="tech-badge">SQL</span>
+        <div class="project-card">
+            <div class="project-image-wrapper">
+                <div class="project-image-icon">⚡</div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Energy Consumption & Price Analysis</h3>
+                <p class="project-description">Analyzing trends and correlations in energy data with interactive dashboard filters. Real-time data visualization and predictive insights for energy management.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Power BI</span>
+                    <span class="tech-badge">Data Analysis</span>
+                    <span class="tech-badge">SQL</span>
+                </div>
+                <div class="project-button-group">
+                    <a href="https://github.com/Rawdaa-A" target="_blank" class="github-btn">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="card project-card">
-            <h3>Weather Dashboard</h3>
-            <p>Real-time weather monitoring dashboard with interactive charts and data visualizations.</p>
-            <div class="tech-badges">
-                <span class="tech-badge">React</span>
-                <span class="tech-badge">API</span>
-                <span class="tech-badge">Chart.js</span>
+        <div class="project-card">
+            <div class="project-image-wrapper">
+                <div class="project-image-icon">🌤️</div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Weather Dashboard</h3>
+                <p class="project-description">Real-time weather monitoring dashboard with interactive charts and data visualizations. Responsive design with live API integration and historical data tracking.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">API</span>
+                    <span class="tech-badge">Chart.js</span>
+                </div>
+                <div class="project-button-group">
+                    <a href="https://github.com/Rawdaa-A" target="_blank" class="github-btn">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -985,27 +1178,27 @@
         <h2 class="contact-title">Let's build something great together!</h2>
         
         <p class="contact-desc">
-            Got a cool idea or a data puzzle ? Let's grab a virtual coffee and turn those numbers into something amazing!
+            Got a cool idea or a data puzzle? Let's grab a virtual coffee and turn those numbers into something amazing!
         </p>
 
         <a href="https://wa.me/201015483429" target="_blank" class="contact-btn">
-            <i class="fa-solid fa-paper-plane"></i>  Say Hi! 👋
+            <i class="fa-solid fa-paper-plane"></i> Say Hi! 👋
         </a>
 
         <div class="social-icons-row">
-            <a href="mailto:rawdaabdelghaffar03@gmail.com" class="icon-box">
+            <a href="mailto:rawdaabdelghaffar03@gmail.com" class="icon-box" title="Email">
                 <i class="fa-solid fa-envelope"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/rawda-abdelghaffar" target="_blank" class="icon-box">
+            <a href="https://www.linkedin.com/in/rawda-abdelghaffar" target="_blank" class="icon-box" title="LinkedIn">
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
 
-            <a href="https://github.com/Rawdaa-A" target="_blank" class="icon-box">
+            <a href="https://github.com/Rawdaa-A" target="_blank" class="icon-box" title="GitHub">
                 <i class="fa-brands fa-github"></i>
             </a>
 
-            <a href="https://wa.me/201015483429" target="_blank" class="icon-box">
+            <a href="https://wa.me/201015483429" target="_blank" class="icon-box" title="WhatsApp">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
         </div>
