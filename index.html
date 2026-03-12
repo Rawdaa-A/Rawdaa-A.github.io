@@ -655,21 +655,39 @@
 
     /* ===== CONTACT SECTION ===== */
     .contact-section {
-      padding: 7.5rem 2rem;
+      padding: 8rem 2rem;
       text-align: center;
-      background: linear-gradient(to bottom, #4c1d95, #0f0720);
+      background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 50%, #0f0720 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .contact-container {
-      max-width: 50rem;
+      max-width: 60rem;
       margin: 0 auto;
+      width: 100%;
     }
 
     .contact-title {
       font-family: 'Poppins', sans-serif;
-      font-size: 3rem;
-      margin-bottom: 1.25rem;
-      background: linear-gradient(135deg, var(--text-white) 0%, var(--purple-light) 100%);
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      line-height: 1.1;
+    }
+
+    .contact-title::first-line {
+      color: var(--text-white);
+    }
+
+    .contact-title-part-white {
+      color: var(--text-white);
+    }
+
+    .contact-title-part-purple {
+      background: linear-gradient(135deg, var(--purple-light) 0%, #c084fc 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -677,52 +695,60 @@
 
     .contact-desc {
       color: var(--text-gray);
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
       line-height: 1.8;
-      font-size: 1.125rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
     }
 
     .contact-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.625rem;
-      padding: 1rem 2.5rem;
-      background: var(--purple-light);
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1rem 2.25rem;
+      background: linear-gradient(135deg, var(--purple-light) 0%, #c084fc 100%);
       color: #000;
-      border-radius: 2.5rem;
+      border: none;
+      border-radius: 9999px;
       font-weight: 700;
+      font-family: 'Poppins', sans-serif;
       text-decoration: none;
       transition: var(--transition);
-      box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
-      margin-bottom: 3rem;
-      font-size: 1.125rem;
+      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+      margin-bottom: 3.5rem;
+      font-size: 1rem;
       cursor: pointer;
     }
 
     .contact-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 35px rgba(168, 85, 247, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(168, 85, 247, 0.6);
+    }
+
+    .contact-btn:active {
+      transform: translateY(-2px);
     }
 
     .social-icons-row {
       display: flex;
       justify-content: center;
-      gap: 1.25rem;
-      margin-bottom: 3rem;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
       flex-wrap: wrap;
     }
 
     .icon-box {
-      width: 3.75rem;
-      height: 3.75rem;
+      width: 4rem;
+      height: 4rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(107, 33, 168, 0.2);
+      border: 1.5px solid rgba(168, 85, 247, 0.4);
       border-radius: 0.75rem;
       color: var(--text-gray);
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       transition: var(--transition);
       text-decoration: none;
     }
@@ -730,34 +756,37 @@
     .icon-box:hover {
       color: var(--purple-light);
       border-color: var(--purple-light);
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
+      background: rgba(168, 85, 247, 0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(168, 85, 247, 0.35);
     }
 
     .footer-line-box {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1.25rem;
-      margin-bottom: 1.25rem;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .line {
       height: 1px;
-      width: 5rem;
-      background: rgba(255, 255, 255, 0.2);
+      width: 4rem;
+      background: rgba(168, 85, 247, 0.3);
     }
 
     .footer-name {
       color: var(--purple-light);
       font-family: 'Poppins', sans-serif;
-      letter-spacing: 0.125rem;
+      letter-spacing: 0.15rem;
       font-weight: 700;
+      font-size: 1.1rem;
     }
 
     .copyright {
-      color: var(--text-gray);
+      color: rgba(203, 213, 225, 0.7);
       font-size: 0.9rem;
+      letter-spacing: 0.3px;
     }
 
     /* ===== ANIMATIONS ===== */
@@ -841,7 +870,26 @@
       }
 
       .contact-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
+      }
+
+      .contact-section {
+        padding: 6rem 1.5rem;
+        min-height: auto;
+      }
+
+      .contact-desc {
+        font-size: 1rem;
+      }
+
+      .social-icons-row {
+        gap: 1rem;
+      }
+
+      .icon-box {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.3rem;
       }
 
       .tech-stack {
@@ -875,7 +923,37 @@
       }
 
       .contact-title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+      }
+
+      .contact-section {
+        padding: 4rem 1rem;
+      }
+
+      .contact-desc {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+      }
+
+      .contact-btn {
+        padding: 0.875rem 2rem;
+        font-size: 0.95rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .social-icons-row {
+        gap: 0.875rem;
+        margin-bottom: 3rem;
+      }
+
+      .icon-box {
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.1rem;
+      }
+
+      .footer-name {
+        font-size: 1rem;
       }
 
       nav {
@@ -1175,14 +1253,14 @@
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
     <div class="contact-container">
-        <h2 class="contact-title">Let's build something great together!</h2>
+        <h2 class="contact-title"><span class="contact-title-part-white">Let's</span> <span class="contact-title-part-purple">Work Together</span></h2>
         
         <p class="contact-desc">
-            Got a cool idea or a data puzzle? Let's grab a virtual coffee and turn those numbers into something amazing!
+            Whether you need a data dashboard, AI model, or analytics solution — I'm one message away.
         </p>
 
         <a href="https://wa.me/201015483429" target="_blank" class="contact-btn">
-            <i class="fa-solid fa-paper-plane"></i> Say Hi! 👋
+            <i class="fa-solid fa-paper-plane"></i> Hire Me / Get In Touch
         </a>
 
         <div class="social-icons-row">
